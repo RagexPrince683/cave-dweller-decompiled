@@ -34,6 +34,17 @@ Microsoft makes no warranties, express or implied, with respect to the mappings 
 Use and modification of this document or the source code (in any form) of Minecraft: Java Edition is governed by the Minecraft End User License Agreement available at https://account.mojang.com/documents/minecraft_eula.
 ```
 
+## Process
+
+In order to actually create this decompilation, I followed these steps:
+
+- Creating a new Forge project.
+- Importing the mod as a local `implementation fg.deobf` dependency.
+- Retrieving the deobfuscated jar from ForgeGradle's cache.
+- Decompiling the jar with [Vineflower](https://github.com/Vineflower/vineflower), no additional settings.
+- Creating another new Forge project and placing the decompiled code and extracted resources into the correct directories under `src/main`.
+- Added GeckoLib 4.0.4 as a dependency.
+
 ## Contributing
 
 I will not accept contributions for code that changes the behaviour (including bug fixes), metadata, or signatures of the mod.
